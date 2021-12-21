@@ -15,15 +15,13 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 
 const sess = {
-  secret: 'thisismysecretkey',
-  cookie: {
-    expires: 10 * 60 * 1000
-  },
+  secret: process.env.DB_SESSION_SECRET,
+  cookie: { maxAge: 7600000 },
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
     db: sequelize
-  }),
+  })
 };
 
 app.use(session(sess));

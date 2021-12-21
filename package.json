@@ -1,7 +1,7 @@
 {
   "name": "mvctechblog",
   "version": "1.0.0",
-  "description": "",
+  "description": "MVC Tech blog challenge homework",
   "main": "server.js",
   
   "scripts": {
